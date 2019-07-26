@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    main{
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    main:hover{
+        transform: rotate3d(1,1,1,360deg);
+        transition: all 3s linear;
+    }
+    .box{
+        width: 300px;
+        height: 300px;
+        border:1px solid #000;
+        margin: 0 auto;
+        display: flex;
+        background: -webkit-linear-gradient(top,#fff, #806460);
+        position: absolute;
+    }
+    .son{
+        width: 80px;
+        height: 80px;
+        background-color: #ff0036;
+        border-radius: 50%;
+        margin: 10px;
+    }
+    .box1{
+        justify-content: center;
+        align-items: center;
+    }
+    .box2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transform:rotateX(-90deg);
+        transform-origin: bottom;
+        opacity: 0.5;
+    }
+    .box3{
+        flex-direction: column;
+        justify-content: space-between;
+        transform:rotateY(-90deg);
+        transform-origin: left;
+        opacity: 0.5;
+    }
+    .box3 .son:nth-child(2){
+        align-self: center;
+    }
+    .box3 .son:nth-child(3){
+        align-self: flex-end;
+    }
+    .box4{
+        justify-content: space-between;
+        transform:rotateX(90deg);
+        transform-origin: top;
+        opacity: 0.5;
+    }
+    .box4 .sonbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box5{
+        justify-content: space-between;
+        transform:rotateY(90deg);
+        transform-origin: right;
+        opacity: 0.5;
+    }
+    .box5 .sonbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box5 .sonbox:nth-child(2){
+        justify-content: center;
+    }
+    .box6{
+        justify-content: center;
+        transform:translateZ(302px);
+        opacity: 0.5;
+
+    }
+    .box6 .sonbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+</style>
+<body>
+<main>
+<div class="box1 box">
+    <div class="son"></div>
+</div>
+<div class="box2 box">
+    <div class="son"></div>
+    <div class="son"></div>
+</div>
+<div class="box3 box">
+    <div class="son"></div>
+    <div class="son"></div>
+    <div class="son"></div>
+</div>
+<div class="box4 box">
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</div>
+<div class="box5 box">
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <div class="sonbox">
+        <div class="son"></div>
+    </div>
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</div>
+<div class="box6 box">
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <div class="sonbox">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</div>
+</main>
+</body>
+</html>
